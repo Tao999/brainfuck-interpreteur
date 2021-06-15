@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1623778314 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/main.cpp
+	<iostream>
+	"Interpretor.h"
+
+1623785006 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/src/Chain.cpp
+	"Chain.h"
+
+1623771928 /home/tao/Documents/CodeBlocksProjects/Brainfuck/include/Chain.h
+
+1623784910 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/src/Interpretor.cpp
+	<iostream>
+	"Interpretor.h"
+
+1623784931 /home/tao/Documents/CodeBlocksProjects/Brainfuck/include/Interpretor.h
+	<iostream>
+	<fstream>
+	"Chain.h"
+
