@@ -41,6 +41,10 @@ int Chain::GetValue(){
     return m_current->m_value;
 }
 
+void Chain::SetValue(int v){
+    m_current->m_value = v;
+}
+
 Chain::Node::Node():
 pPrev(nullptr),
 pNext(nullptr)

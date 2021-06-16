@@ -11,6 +11,7 @@
 #define INCREMENT       '+'
 #define DECREMENT       '-'
 #define PRINT           '.'
+#define GET_CHAR        ','
 #define OPEN_LOOP       '['
 #define CLOSE_LOOP       ']'
 

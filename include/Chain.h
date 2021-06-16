@@ -14,6 +14,7 @@ class Chain
         void Dec();
 
         int GetValue();
+        void SetValue(int v);
 
     protected:
 
@@ -23,7 +24,7 @@ class Chain
             Node();
             ~Node();
 
-            int m_value;
+            char m_value;
             Node*pNext;
             Node*pPrev;
         };

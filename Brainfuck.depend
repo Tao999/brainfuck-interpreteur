@@ -3,16 +3,16 @@
 	<iostream>
 	"Interpretor.h"
 
-1623785006 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/src/Chain.cpp
+1623851661 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/src/Chain.cpp
 	"Chain.h"
 
-1623771928 /home/tao/Documents/CodeBlocksProjects/Brainfuck/include/Chain.h
+1623851924 /home/tao/Documents/CodeBlocksProjects/Brainfuck/include/Chain.h
 
-1623784910 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/src/Interpretor.cpp
+1623852218 source:/home/tao/Documents/CodeBlocksProjects/Brainfuck/src/Interpretor.cpp
 	<iostream>
 	"Interpretor.h"
 
-1623784931 /home/tao/Documents/CodeBlocksProjects/Brainfuck/include/Interpretor.h
+1623851329 /home/tao/Documents/CodeBlocksProjects/Brainfuck/include/Interpretor.h
 	<iostream>
 	<fstream>
 	"Chain.h"
