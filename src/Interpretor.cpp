@@ -72,7 +72,10 @@ void Interpretor::Compute()
             break;
 
         case GET_CHAR:
-            m_memory.SetValue(getchar());
+            char temp;
+            cin >> temp;
+            cin.ignore();
+            m_memory.SetValue(temp);
             break;
         default:
         break;
