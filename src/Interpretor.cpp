@@ -3,6 +3,11 @@
 Interpretor::Interpretor(string path)
 {
     m_file.open(path, ios::in|ios::binary);
+
+    if(!m_file.is_open()){
+        cerr << "fichier \"" << path << "\" non trouvé" << endl;
+        exit(0);
+    }
 }
 
 Interpretor::~Interpretor()
@@ -53,8 +58,14 @@ void Interpretor::Compute()
             //si la val acctuelle !=0, on reviens au '[' correspondant
             if(m_memory.GetValue())
                 m_file.seekg(m_stack.top());
-            else//sinon on pop le '[' du stack pour ne pas y revenir
+            else{//sinon on pop le '[' du stack pour ne pas y revenir
+                if(!m_stack.size()){
+                    cerr << endl << "instruction ']' non valide au caractère " << m_file.tellg()
+                        << ", '[' manquant"<< endl;
+                    exit(0);
+                }
                 m_stack.pop();
+            }
             break;
 
         case PRINT:

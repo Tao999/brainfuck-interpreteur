@@ -2,15 +2,11 @@
 ------------------------------------------------
 >,		b
 ------------------------------------------------
-<[->		boucle sur a
-	copie de b
-	[->+>+<<]
-	>>[-<<+>>]<<
-	mem : abb
-	       |
-	[>>+<<-] on vide la 1er b dans c mem : a0bc
-	>[-<+>]< coupé du second b avant celui ci mem : ab0c
-<]
+<[			boucle sur &0
+	>[->+>+<<]	coupé &1 à &2 et &3
+	>[-<+>]		coupé &2 à &1
+	<<-
+]
 
 /// Affichage du résultat merci stackoverflow
 >>>>
