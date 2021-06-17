@@ -28,8 +28,8 @@ class Interpretor
 
     private:
         fstream m_file;
-        Chain m_memory;
         stack<streampos> m_stack;
+        Chain m_memory;
 };
 
 #endif // INTERPRETOR_H

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Interpretor.h"
 
 Interpretor::Interpretor(string path)
