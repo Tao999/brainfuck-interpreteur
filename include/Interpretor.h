@@ -1,6 +1,6 @@
 #ifndef INTERPRETOR_H
 #define INTERPRETOR_H
-
+#include <stack>
 #include <iostream>
 #include <fstream>
 
@@ -29,6 +29,7 @@ class Interpretor
     private:
         fstream m_file;
         Chain m_memory;
+        stack<streampos> m_stack;
 };
 
 #endif // INTERPRETOR_H

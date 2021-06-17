@@ -14,6 +14,7 @@ Interpretor::~Interpretor()
 void Interpretor::Compute()
 {
     char c;
+
     while (m_file.get(c)) {
         switch (c){
         case MOVE_FORWARD:
@@ -33,7 +34,7 @@ void Interpretor::Compute()
             break;
 
         case OPEN_LOOP:
-        //si valeure acctuelle != 0 -> on cherche la fin de la boucle
+            //si valeure acctuelle != 0 -> on cherche la fin de la boucle
             if(!m_memory.GetValue()){
                 int nbopen=0;
                 do{
@@ -45,26 +46,16 @@ void Interpretor::Compute()
                 }while(nbopen || m_file.eof());
                 m_file.seekg(-1, ios_base::cur);
             }
+            else
+                m_stack.push(m_file.tellg());
             break;
 
         case CLOSE_LOOP:
-        //si valeure acctuelle != 0 -> on cherche le début de la boucle
+            //si la val acctuelle !=0, on reviens au '[' correspondant
             if(m_memory.GetValue())
-            {
-                int nbopen=0;
-                do{
-                    if(c == OPEN_LOOP)
-                        nbopen++;
-                    else if(c == CLOSE_LOOP)
-                        nbopen--;
-                    m_file.seekg(-2, ios_base::cur);
-                    m_file.get(c);
-                    m_file.seekg(0, ios_base::cur);
-
-                }while(nbopen);
-                m_file.seekg(1, ios_base::cur);
-                //cout << "end" <<endl;
-            }
+                m_file.seekg(m_stack.top());
+            else//sinon on pop le '[' du stack pour ne pas y revenir
+                m_stack.pop();
             break;
 
         case PRINT:
