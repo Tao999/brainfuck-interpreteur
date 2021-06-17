@@ -5,7 +5,7 @@ Brainfuck <path/script>
 ```
 ex
 ```
-Brainfuck ./script
+Brainfuck ./scripts/factoriel
 ```
 
 Instructions BrainFuck :
